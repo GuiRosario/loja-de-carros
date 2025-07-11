@@ -1,0 +1,25 @@
+{
+  "carros": [
+    {
+      "id": 1,
+      "nome": "Onix Turbo",
+      "marca": "Chevrolet",
+      "preco": 52000,
+      "imagem": "https://dealersites-content.s3.us-east-1.amazonaws.com/saga/blog-2023/set23-2/Onix-Plus-2023%20%286%29.jpg"
+    },
+    {
+      "id": 2,
+      "nome": "Gol 1.6",
+      "marca": "Volkswagen",
+      "preco": 39000,
+      "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQ6rUkxwW0sYFOqLzWZwsY7h5rCVuPvkpDw&s"
+    },
+    {
+      "id": 3,
+      "nome": "320i M Sport",
+      "marca": "BMW",
+      "preco": 210000,
+      "imagem": "https://cdn.motor1.com/images/mgl/KPK4R/s1/bmw-320i-m-sport-2021-teste-br.jpg"
+    }
+  ]
+}
