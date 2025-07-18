@@ -7,7 +7,7 @@ function Carro({ carro }) {
             <h2>{carro.nome}</h2>
             <p>{carro.preço}</p>
             <p>Marca: {carro.marca}</p>
-            <p>Preço: R$ {carro.preço}</p>
+            <p>Preço: R$ {carro.preco}</p>
             <Link to={`/carro/${carro.id}`}>Ver mais</Link>
         </div>
     );

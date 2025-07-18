@@ -1,13 +1,13 @@
 const carros = [
     {
-        id:'1',
+        id:"1",
         nome:"Porshe 911",
         marca:"Porsche",
         preço: 1000000,
         imagem: 'https://http2.mlstatic.com/D_NQ_953463-MLA80196269024_112024-OO.jpg'
     },
     {
-        id:'2',
+        id:"2",
         nome:"BMW X6",
         marca:"BMW",
         preço: 1500000,

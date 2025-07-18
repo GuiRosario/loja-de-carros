@@ -1,11 +1,21 @@
-import carros from '../data/carros';
 import Carro from '../components/Carro';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function ListaCarros() {
     const [filtroMarca, setFiltroMarca] = useState('')
     const [filtroNome, setFiltroNome] = useState('')
+    const [carros, setCarros] = useState([])
+
+    useEffect(() => {
+        async function carregarCarros() {
+            const resposta = await fetch("http://localhost:3001/carros")
+            const dados = await resposta.json()
+            setCarros(dados)
+        }
+        carregarCarros();
+    }, [])
+
     let marcasFiltradas = [...new Set(carros.map(c => c.marca))]
 
     const handleFiltroMarca = (e) => {
@@ -19,7 +29,6 @@ function ListaCarros() {
     const handleLimparFiltros = () => {
         setFiltroMarca('');
         setFiltroNome('');
-
     }
 
     let carrosFiltrados = carros.filter(carro => {
@@ -27,6 +36,7 @@ function ListaCarros() {
         const porNome = carro.nome.toLocaleLowerCase().includes(filtroNome.toLocaleLowerCase());
         return porMarca && porNome;
     })
+
     return (
         <div style={{ padding: '20px' }}>
             <h1>Carros a venda:</h1>
